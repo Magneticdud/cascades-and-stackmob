@@ -1,9 +1,9 @@
 var apikey = "648d7f86-44a0-408a-b0e3-b3b56925115f";
-var url = "http://api.stackmob.com/names/ea8b9687ba15443fbeeb1c2ea4cc63ce";
+var url = "http://api.stackmob.com/";
                 
-function comm(what,content){
+function comm(action,object,content){
 	var http = new XMLHttpRequest();
-    http.open(what, url, true);
+    http.open(action, url+object, true);
 
     http.setRequestHeader("Accept", "application/vnd.stackmob+json; version=0");
     http.setRequestHeader("X-StackMob-API-Key", apikey);

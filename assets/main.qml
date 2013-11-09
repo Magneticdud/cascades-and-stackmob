@@ -15,7 +15,7 @@ Page {
             horizontalAlignment: HorizontalAlignment.Center
             topMargin: 50.0
             onClicked: {
-                StackMob.comm("PUT","{\"customer\": false}")
+                StackMob.comm("PUT","names/ea8b9687ba15443fbeeb1c2ea4cc63ce","{\"customer\": true}")
             }
             text: qsTr("Save")
 
