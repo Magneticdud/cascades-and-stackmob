@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import "stackmob.js" as StackMob
 
 Page {
     Container {
@@ -14,17 +15,7 @@ Page {
             horizontalAlignment: HorizontalAlignment.Center
             topMargin: 50.0
             onClicked: {
-                var url = "http://api.stackmob.com/names/ea8b9687ba15443fbeeb1c2ea4cc63ce";
-                var http = new XMLHttpRequest()
-                var params = "{\"customer\": true}";
-                http.open("PUT", url, true);
-
-                http.setRequestHeader("Accept", "application/vnd.stackmob+json; version=0");
-                http.setRequestHeader("X-StackMob-API-Key", "648d7f86-44a0-408a-b0e3-b3b56925115f");
-                http.setRequestHeader("Content-type", "application/json");
-                http.setRequestHeader("Content-length", params.length);
-                http.setRequestHeader("Connection", "close");
-                http.send(params);
+                StackMob.comm("PUT","{\"customer\": false}")
             }
             text: qsTr("Save")
 
